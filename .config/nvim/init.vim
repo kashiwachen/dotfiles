@@ -7,6 +7,8 @@ call plug#begin()
   Plug 'scrooloose/nerdtree'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'Raimondi/delimitMate'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 call plug#end()
 """colors
@@ -90,12 +92,12 @@ let g:coc_global_extensions = ['coc-python', 'coc-emmet', 'coc-css', 'coc-html',
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "GoTo code navigation
-nmap <leader>g <C-o>
+nmap <leader> g <C-o>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader> rn <Plug>(coc-rename)
 "" indentLines
 let g:indentLine_enabled = 1
 let g:indentLine_char = '│'
@@ -119,3 +121,12 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 " delimitMate to turn off autocomplete on specific words:
 " au FileType mail let b:delimitMate_autoclose = 0 : this turns off for 'mail'n
+
+"" airfline
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+
+"" Pydocstring
+let g:pydocstring_doq_path = '~/.pyenv/shims/doq'
