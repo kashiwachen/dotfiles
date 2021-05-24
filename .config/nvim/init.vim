@@ -9,7 +9,7 @@ call plug#begin()
   Plug 'Raimondi/delimitMate'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+  Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' , 'for': 'python' }
 call plug#end()
 """colors
 set termguicolors
@@ -24,6 +24,7 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 set mouse-=a
 """standard
 syntax on
+set nocompatible
 set encoding=utf-8
 set novisualbell
 set wrap
@@ -62,7 +63,6 @@ augroup python
                 \   syn keyword pythonBuiltin cls
 augroup end
 """spacing
-filetype plugin indent off
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -127,6 +127,3 @@ let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
-
-"" Pydocstring
-let g:pydocstring_doq_path = '~/.pyenv/shims/doq'
