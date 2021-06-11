@@ -29,6 +29,13 @@ repos:
     rev: v2.8.3
     hooks:
       - id: pylint
+        args:
+          [
+            "-rn",
+            "-sn",
+            "--rcfile=.pylintrc",
+            "--load-plugins=pylint.extensions.docparams",
+          ]
         #   - repo: https://gitlab.com/pycqa/flake8
         #     rev: 3.8.4
         #     hooks:
