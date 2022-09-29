@@ -1,0 +1,20 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = kashiwachen
+	email = pochiachen0321@gmail.com
+[icdiff]
+	options = --highlight --line-numbers
+[diff]
+ # Use icdiff instead of internal diff
+  external = ~/bin/git-diff-wrapper.sh
+[alias]
+  last = log -1
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow) %d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  co = checkout
+  cm = commit -m
+  st = status
+  br = branch

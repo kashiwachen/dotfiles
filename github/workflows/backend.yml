@@ -1,0 +1,75 @@
+name: Backend CI
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+
+jobs:
+  build:
+    name: Django check
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./compass
+    container:
+      image: osgeo/gdal:ubuntu-small-3.1.3
+    env:
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      AWS_COMPASS_MAP_TOKEN_KEY: test
+      DJANGO_SECRET_KEY: test
+      DJANGO_ENV: test
+      DB_NAME_COMPASS: compass
+      DB_NAME_HIMAWARI: himawari
+      DB_NAME_GCOMC: jaxa_gcomc
+      DB_HOST: 127.0.0.1
+      DB_PORT: 5432
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      CACHE_ENDPOINT: test_cache_endpoint
+      CACHE_PORT: test_cache_port
+      EMAIL_DOMAIN: localhost_domain
+      EMAIL_AWS_SES_ACCESS_KEY_ID: local_aws_ses_access_key_id
+      EMAIL_AWS_SES_SECRET_ACCESS_KEY: local_aws_ses_access_key
+      EMAIL_FROM_EMAIL: noreply@local.com
+      STRIPE_PUB_KEY: test_pub_key
+      STRIPE_SECRET_KEY: test_secret_key
+      STRIPE_WEBHOOK_KEY: test_webhook_key
+      UV_RATIO_FILE_PATH: /data/ratio_file
+
+
+    services:
+      compass_localdb:
+        image: mdillon/postgis:9.6
+        env:
+          POSTGRES_USER: ${{ env.DB_USER }}
+          POSTGRES_PASSWORD: ${{ env.DB_PASSWORD }}
+          POSTGRES_DB: ${{ env.DB_NAME }}
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install pip and dependencies
+        run: |
+          apt install -yqq build-essential libssl-dev libffi-dev \
+            wget python3-distutils python3-dev
+          wget https://bootstrap.pypa.io/get-pip.py
+          python get-pip.py && rm get-pip.py # remove the extra get-pip.py file for linter check
+          pip install -r ../requirements.txt
+      - name: Black Check
+        run: |
+          pip install black==22.3.0
+          black . --check --exclude migrations
+      - name: Flake8 Check
+        run: |
+          pip install flake8==3.8.4
+          flake8 . --count
