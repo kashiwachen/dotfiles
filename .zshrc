@@ -92,6 +92,7 @@ plugins=(
   vscode
   z
   cp
+  poetry
 )
 
 
@@ -122,6 +123,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# Tell nvim alias
+alias vim="nvim"
+alias vi="nvim"
+alias lg="lazygit"
+
+# Tell tmux alias
+alias tm="tmux"
 
 # Tell ls to be colourful
 export CLICOLOR=1
@@ -130,15 +139,30 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
-# Tell nvim alias
-alias vim="nvim"
-alias vi="nvim"
-alias python="python3"
-alias pip="pip3"
 
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=0
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# bun completions
+[ -s "/Users/oscar/.bun/_bun" ] && source "/Users/oscar/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/oscar/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# poetry
+export PATH="/Users/oscar/.local/bin:$PATH"
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+fpath+=${ZDOTDIR:-~}/.zsh_functions
 
