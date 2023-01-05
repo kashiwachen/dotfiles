@@ -913,6 +913,25 @@ window:
     general: Alacritty
 
 font:
+  # Normal (roman) font face
+  normal:
+    family: Hack Nerd Font Mono
+    style: Regular
+
+  # Bold font face
+  bold:
+    family: Hack Nerd Font Mono
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: Hack Nerd Font Mono
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: Hack Nerd Font Mono
+    style: Bold Italic
   size: 13
 
 scrolling:
@@ -925,7 +944,6 @@ import:
 cursor:
   style:
     shape: Underline
-  
 selection:
   save_to_clipboard: true
 
