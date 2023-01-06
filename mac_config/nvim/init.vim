@@ -91,7 +91,7 @@ au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " open terminal on ctrl+n
 function! OpenTerminal()
   split term://bash
-  resize 10
+  resize 20 
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
