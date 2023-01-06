@@ -2,6 +2,7 @@
 " PlugInstall, PlugUpdate, PlugClean
 call plug#begin()
   Plug 'ghifarit53/tokyonight-vim'
+  Plug 'doums/darcula'
   Plug 'joshdick/onedark.vim'
   Plug 'Yggdroot/indentLine'
   Plug 'scrooloose/nerdtree'
@@ -26,6 +27,7 @@ let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 colorscheme tokyonight
 " colorscheme onedark
+" colorscheme darcula
 " this forces transparent bg
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 """mouse
