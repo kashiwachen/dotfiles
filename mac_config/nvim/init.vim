@@ -18,12 +18,13 @@ call plug#begin()
   Plug 'vim-jp/vim-go-extra'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 """colors
 set termguicolors
 " set t_Co=256
-let g:tokyonight_style = 'night' " available: night, storm
+"
+" theme 
+let g:tokyonight_style = 'storm' " available: night, storm
 let g:tokyonight_enable_italic = 1
 colorscheme tokyonight
 " colorscheme onedark
