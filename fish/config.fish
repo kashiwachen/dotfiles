@@ -12,9 +12,12 @@ set -gx STARSHIP_CONFIG "$HOME/.config/starship.toml"
 set -gx STARSHIP_CACHE "$HOME/.starship/cache"
 
 # alias setup
+alias python="python3"
+alias pip="pip3"
 alias vim="nvim"
 alias vi="nvim"
 alias lg="lazygit"
+
 alias tm="tmux"
 alias tma="tmux at"
 alias tmt="tmux at -t"
