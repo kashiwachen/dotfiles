@@ -23,6 +23,7 @@ alias tma="tmux at"
 alias tmt="tmux at -t"
 alias tmk="tmux kill-session -t"
 alias tml="tmux ls"
+
 alias ls="exa -lag --header"
 
 # colored man setup
