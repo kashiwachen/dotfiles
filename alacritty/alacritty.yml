@@ -906,8 +906,8 @@ window:
     x: 7
     y: 7
   dimensions:
-    columns: 140
-    lines: 38
+    columns: 130
+    lines: 34
   class:
     instance: Alacritty
     general: Alacritty
@@ -915,22 +915,26 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    family: Hack Nerd Font Mono
+    # family: Hack Nerd Font Mono
+    family: ComicCodeLigatures Nerd Font
     style: Regular
 
   # Bold font face
   bold:
-    family: Hack Nerd Font Mono
+    # family: Hack Nerd Font Mono
+    family: ComicCodeLigatures Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    family: Hack Nerd Font Mono
+    # family: Hack Nerd Font Mono
+    family: ComicCodeLigatures Nerd Font
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Hack Nerd Font Mono
+    # family: Hack Nerd Font Mono
+    family: ComicCodeLigatures Nerd Font
     style: Bold Italic
   size: 13
 
@@ -944,6 +948,7 @@ import:
 cursor:
   style:
     shape: Underline
+
 selection:
   save_to_clipboard: true
 
