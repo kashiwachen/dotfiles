@@ -1,29 +1,31 @@
 """plugins
 " PlugInstall, PlugUpdate, PlugClean
 call plug#begin()
+  Plug 'dense-analysis/ale' " Syntax checker with LSP
   Plug 'ghifarit53/tokyonight-vim'
   Plug 'doums/darcula'
   Plug 'joshdick/onedark.vim'
   Plug 'Yggdroot/indentLine'
   Plug 'scrooloose/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'preservim/nerdcommenter'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'Raimondi/delimitMate'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'tpope/vim-fugitive'
   Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' , 'for': 'python' }
-  Plug 'preservim/nerdcommenter'
   Plug 'fatih/vim-go'
   Plug 'vim-jp/vim-go-extra'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
+
 """colors
 set termguicolors
 " set t_Co=256
-"
-" theme 
+
+" theme
 let g:tokyonight_style = 'storm' " available: night, storm
 let g:tokyonight_enable_italic = 1
 colorscheme tokyonight
@@ -31,8 +33,10 @@ colorscheme tokyonight
 " colorscheme darcula
 " this forces transparent bg
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-"""mouse
+
+" mouse
 set mouse-=a
+
 """standard
 syntax on
 set nocompatible
@@ -49,6 +53,7 @@ set wildmenu
 set ruler
 set colorcolumn=80
 set wildmenu
+
 ""coc
 set hidden
 set nobackup
@@ -65,6 +70,7 @@ else
 endif
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
 """language settings
 augroup python
     autocmd!
@@ -72,6 +78,7 @@ augroup python
                 \   syn keyword pythonBuiltin self
                 \   syn keyword pythonBuiltin cls
 augroup end
+
 """spacing
 set autoindent
 set smartindent
@@ -80,6 +87,7 @@ set tabstop=2
 set shiftwidth=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 sts=4
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 sts=4
+
 """integrated terminal
 " open new split panes to right and below
 set splitright
@@ -91,7 +99,7 @@ au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " open terminal on ctrl+n
 function! OpenTerminal()
   split term://bash
-  resize 20 
+  resize 20
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
@@ -116,12 +124,20 @@ let g:indentLine_enabled = 1
 let g:indentLine_char = '│'
 
 "" Nerdtree
+let g:NERDTreeDirArrowExpandable = '?'
+let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeMinimalMenu=1
 let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
+" let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
-" Automaticaly close nvim if NERDTree is only thing left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " Toggle
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 " use alt+hjkl to move between split/vsplit panels
@@ -154,3 +170,6 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+"" typing
+let g:ale_fixers = {'python': ['flake8', 'pyright'], 'go': ['gofmt', 'golint']}
