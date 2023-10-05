@@ -948,6 +948,8 @@ import:
 cursor:
   style:
     shape: Underline
+  vi_mode_style: Underline
+
 
 selection:
   save_to_clipboard: true
@@ -965,3 +967,7 @@ key_bindings:
 
 env:
   TERM: xterm-256color
+
+debug:
+  persistent_logging: false
+  log_level: Warn
