@@ -1,6 +1,7 @@
 """plugins
 " PlugInstall, PlugUpdate, PlugClean
 call plug#begin()
+  Plug 'dense-analysis/ale' " Syntax checker with LSP
   Plug 'ghifarit53/tokyonight-vim'
   Plug 'doums/darcula'
   Plug 'joshdick/onedark.vim'
@@ -19,10 +20,11 @@ call plug#begin()
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
+
 """colors
 set termguicolors
 " set t_Co=256
-"
+
 " theme
 let g:tokyonight_style = 'storm' " available: night, storm
 let g:tokyonight_enable_italic = 1
@@ -31,8 +33,10 @@ colorscheme tokyonight
 " colorscheme darcula
 " this forces transparent bg
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-"""mouse
+
+" mouse
 set mouse-=a
+
 """standard
 syntax on
 set nocompatible
@@ -49,6 +53,7 @@ set wildmenu
 set ruler
 set colorcolumn=80
 set wildmenu
+
 ""coc
 set hidden
 set nobackup
@@ -65,6 +70,7 @@ else
 endif
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
 """language settings
 augroup python
     autocmd!
@@ -72,6 +78,7 @@ augroup python
                 \   syn keyword pythonBuiltin self
                 \   syn keyword pythonBuiltin cls
 augroup end
+
 """spacing
 set autoindent
 set smartindent
@@ -80,6 +87,7 @@ set tabstop=2
 set shiftwidth=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 sts=4
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 sts=4
+
 """integrated terminal
 " open new split panes to right and below
 set splitright
@@ -162,3 +170,6 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+"" typing
+let g:ale_fixers = {'python': ['flake8', 'pyright'], 'go': ['gofmt', 'golint']}
