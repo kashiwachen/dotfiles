@@ -16,6 +16,7 @@ alias python="python3"
 alias pip="pip3"
 alias vim="nvim"
 alias vi="nvim"
+alias vic="nvim --clean"
 alias lg="lazygit"
 
 alias tm="tmux"
@@ -31,3 +32,6 @@ set -g man_blink -o red
 set -g man_bold -o green
 set -g man_standout -b black 93a1a1
 set -g man_underline -u 93a1a1
+
+# Enable pyenv
+pyenv init - | source
