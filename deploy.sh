@@ -13,4 +13,4 @@ cp -r ./git $HOME/.config
 # sync neofetch config
 cp -r ./neofetch $HOME/.config/neofetch
 # sync tmux config
-cp -r ./tmux $HOME
+cp -r ./tmux/tmux.conf $HOME/.tmux.conf
