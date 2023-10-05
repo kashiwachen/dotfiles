@@ -53,9 +53,9 @@ set wildmenu
 set ruler
 set colorcolumn=80
 set wildmenu
+set hidden
 
 ""coc
-set hidden
 set nobackup
 set nowritebackup
 set cmdheight=1
@@ -165,11 +165,8 @@ let g:airline_theme = 'ayu_dark'
 nmap <silent> <C-c> <Plug>(pydocstring)
 let g:pydocstring_formatter = 'google'
 
-"" telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
 "" typing
 let g:ale_fixers = {'python': ['flake8', 'pyright'], 'go': ['gofmt', 'golint']}
+
+"" Load plug config
+source $HOME/.config/nvim/plug-config/telescope.lua
