@@ -1,0 +1,7 @@
+{
+    "python.jediEnabled": true,
+    "python.analysis.diagnosticEnabled": false,
+    "python.autoComplete.addBrackets": true,
+    "python.linting.flake8Enabled": true,
+    "python.pythonPath": "/Users/oscar/.pyenv/shims/python"
+}
