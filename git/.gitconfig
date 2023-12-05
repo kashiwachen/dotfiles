@@ -5,7 +5,6 @@
 	required = true
 [user]
 	name = kashiwachen
-	email = pochiachen0321@gmail.com
 [icdiff]
 	options = --highlight --line-numbers
 [diff]
@@ -20,10 +19,6 @@
   br = branch
   df = diff
 [core]
-	excludesfile = /Users/oscar/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  excludesfile = /Users/oscar/.gitignore_global
+[push]
+  autoSetupRemote = true
