@@ -10,6 +10,7 @@ cp ./starship.toml $HOME/.config/starship.toml
 cp -r ./fish $HOME/.config
 # sync git config
 cp -r ./git/.git* $HOME
+cp -r ./bin $HOME
 # sync neofetch config
 cp -r ./neofetch $HOME/.config
 # sync tmux config
