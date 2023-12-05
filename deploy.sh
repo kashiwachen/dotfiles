@@ -9,7 +9,7 @@ cp ./starship.toml $HOME/.config/starship.toml
 # sync fish shell config
 cp -r ./fish $HOME/.config
 # sync git config
-cp -r ./git $HOME/.config
+cp -r ./git/.git* $HOME
 # sync neofetch config
 cp -r ./neofetch $HOME/.config
 # sync tmux config
