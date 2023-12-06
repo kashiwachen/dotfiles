@@ -2,21 +2,19 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-starship init fish | source
-
 # editor setup
 set -gx EDITOR nvim
 
 # starship setup
+starship init fish | source
 set -gx STARSHIP_CONFIG "$HOME/.config/starship.toml"
 set -gx STARSHIP_CACHE "$HOME/.starship/cache"
 
 # alias setup
 alias python="python3"
 alias pip="pip3"
-alias vim="nvim"
-alias vi="nvim"
-alias vic="nvim --clean"
+alias v="nvim"
+alias vc="nvim --clean"
 alias lg="lazygit"
 
 alias tm="tmux"
@@ -34,4 +32,4 @@ set -g man_standout -b black 93a1a1
 set -g man_underline -u 93a1a1
 
 # Enable pyenv
-pyenv init - | source
+# pyenv init - | source
