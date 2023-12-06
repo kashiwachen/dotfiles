@@ -2,20 +2,29 @@
 
 I personally start to use the following configures of some tools for daily development:
 
+## Tutorial
+
+1. install `homebrew`
+2. install `Hack Nerd Font`, `fish`, `alacritty`, `exa` throught `homebrew`
+3. install `starship`
+4. install `fisher`(fish plugin manager) and cli tools
+5. configure fish shell
+    1. especially `$PATH` throught `fish_add_path /opt/homebrew/bin`
+    2. default shell for the terminal
+
 ## Terminal
 
-- alacritty
-- fish shell
-  - plugin manager
-    - fisher
-    - omf(oh my fish)
-- starship prompt
+- CLI Ttools
+  - neofetch(check system info)
+  - exa
 - tmux
 - neovim
-- CLI tools
-  - neofetch
-  - z 
-  - fzf
+- starship prompt
+- fish shell
+  - fisher(plugin manager)
+    - z
+    - fzf
+- alacritty
 
 ### DEPRECATED
 
@@ -30,4 +39,3 @@ I personally start to use the following configures of some tools for daily devel
     - .pre-commit config
 - git
 - HHKB keybord config
-
