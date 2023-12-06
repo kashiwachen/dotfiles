@@ -900,6 +900,11 @@
   # Highlight window damage information.
   #highlight_damage: false
 
+shell:
+  program: /opt/homebrew/bin/fish
+  args:
+    - --login
+
 window:
   opacity: 0.95
   padding:
@@ -915,26 +920,26 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    # family: Hack Nerd Font Mono
-    family: ComicCodeLigatures Nerd Font
+    family: Hack Nerd Font Mono
+      #family: ComicCodeLigatures Nerd Font
     style: Regular
 
   # Bold font face
   bold:
-    # family: Hack Nerd Font Mono
-    family: ComicCodeLigatures Nerd Font
+    family: Hack Nerd Font Mono
+      #family: ComicCodeLigatures Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    # family: Hack Nerd Font Mono
-    family: ComicCodeLigatures Nerd Font
+    family: Hack Nerd Font Mono
+      #family: ComicCodeLigatures Nerd Font
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    # family: Hack Nerd Font Mono
-    family: ComicCodeLigatures Nerd Font
+    family: Hack Nerd Font Mono
+      #family: ComicCodeLigatures Nerd Font
     style: Bold Italic
   size: 13
 
@@ -943,7 +948,7 @@ scrolling:
   multiplier: 3
 
 import:
-  - ~/.alacritty-colorscheme/themes/tokyo-night.yaml
+  - ~/.config/alacritty/themes/themes/tokyo-night.yaml
 
 cursor:
   style:
@@ -955,11 +960,6 @@ selection:
   save_to_clipboard: true
 
 live_config_reload: true
-
-shell:
-  program: /usr/local/bin/fish
-  args:
-    - --login
 
 key_bindings:
   - { key: N, mods: Command, action: CreateNewWindow }
