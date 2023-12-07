@@ -2,9 +2,19 @@
 " PlugInstall, PlugUpdate, PlugClean
 call plug#begin()
   Plug 'dense-analysis/ale' " Syntax checker with LSP
-  Plug 'ghifarit53/tokyonight-vim'
+  " neovim themes
+  Plug 'folke/tokyonight.nvim'
   Plug 'doums/darcula'
   Plug 'joshdick/onedark.vim'
+  " install pydocstring
+  Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' , 'for': 'python' }
+  " install golang linter
+  Plug 'fatih/vim-go'
+  Plug 'vim-jp/vim-go-extra'
+  " install telescope.nvim
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+  " other tools
   Plug 'Yggdroot/indentLine'
   Plug 'scrooloose/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -14,11 +24,6 @@ call plug#begin()
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'tpope/vim-fugitive'
-  Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' , 'for': 'python' }
-  Plug 'fatih/vim-go'
-  Plug 'vim-jp/vim-go-extra'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 """colors
