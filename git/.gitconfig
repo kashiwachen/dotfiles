@@ -20,5 +20,6 @@
   df = diff
 [core]
   excludesfile = /Users/oscar/.gitignore_global
+  ignorecase = false
 [push]
   autoSetupRemote = true
