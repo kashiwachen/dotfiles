@@ -7,9 +7,6 @@
 	name = kashiwachen
 [icdiff]
 	options = --highlight --line-numbers
-[diff]
- # Use icdiff instead of internal diff
-  external = ~/bin/git-diff-wrapper.sh
 [alias]
   last = log -1
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow) %d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -17,7 +14,7 @@
   cm = commit -m
   st = status
   br = branch
-  df = diff
+  df = icdiff
   pp = pull --prune
 [core]
   excludesfile = /Users/oscar/.gitignore_global
