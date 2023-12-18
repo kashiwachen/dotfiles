@@ -18,6 +18,7 @@
   st = status
   br = branch
   df = diff
+  pp = pull --prune
 [core]
   excludesfile = /Users/oscar/.gitignore_global
   ignorecase = false
