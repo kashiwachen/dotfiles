@@ -14,6 +14,7 @@ call plug#begin()
   " install telescope.nvim
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   " other tools
   Plug 'Yggdroot/indentLine'
   Plug 'scrooloose/nerdtree'
@@ -21,23 +22,11 @@ call plug#begin()
   Plug 'preservim/nerdcommenter'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'Raimondi/delimitMate'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  Plug 'nvim-lualine/lualine.nvim'
+  " Plug 'vim-airline/vim-airline'
+  " Plug 'vim-airline/vim-airline-themes'
   Plug 'tpope/vim-fugitive'
 call plug#end()
-
-"""colors
-set termguicolors
-" set t_Co=256
-
-" theme
-let g:tokyonight_style = 'storm' " available: night, storm
-let g:tokyonight_enable_italic = 1
-colorscheme tokyonight
-" colorscheme onedark
-" colorscheme darcula
-" this forces transparent bg
-autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 
 " mouse
 set mouse-=a
@@ -56,7 +45,7 @@ set number
 set relativenumber
 set wildmenu
 set ruler
-set colorcolumn=80
+set colorcolumn=88
 set wildmenu
 set hidden
 
@@ -103,7 +92,7 @@ tnoremap <Esc> <C-\><C-n>
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " open terminal on ctrl+n
 function! OpenTerminal()
-  split term://bash
+  split term://fish
   resize 20
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
@@ -111,9 +100,9 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 nnoremap <silent> <C-l> :nohl<CR>
 
 """ Plugin Settings
-"" cock - CocUninstall, CocConfig
+"" coc - CocUninstall, CocConfig
 " python https://github.com/neoclide/coc-python
-let g:coc_global_extensions = ['coc-python', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-pyright', 'coc-json', 'coc-prettier', 'coc-tsserver']
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "GoTo code navigation
@@ -157,21 +146,14 @@ nnoremap <A-l> <C-w>l
 " delimitMate to turn off autocomplete on specific words:
 " au FileType mail let b:delimitMate_autoclose = 0 : this turns off for 'mail'n
 
-"" airline
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline#extensions#hunks#enabled = 0
-let g:airline_theme = 'ayu_dark'
-
 "" pydocstring
 nmap <silent> <C-c> <Plug>(pydocstring)
 let g:pydocstring_formatter = 'google'
 
-"" typing
-let g:ale_fixers = {'python': ['flake8', 'pyright'], 'go': ['gofmt', 'golint']}
-
 "" Load plug config
 source $HOME/.config/nvim/plug-config/telescope.lua
+source $HOME/.config/nvim/plug-config/treesitter.lua
+source $HOME/.config/nvim/plug-config/ale.lua
+source $HOME/.config/nvim/plug-config/color.lua
+" source $HOME/.config/nvim/plug-config/airline.lua
+

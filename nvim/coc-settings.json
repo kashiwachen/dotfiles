@@ -1,7 +1,6 @@
 {
-    "python.jediEnabled": true,
-    "python.analysis.diagnosticEnabled": false,
-    "python.autoComplete.addBrackets": true,
-    "python.linting.flake8Enabled": true,
-    "python.pythonPath": "/Users/oscar/.pyenv/shims/python"
+  "python.pythonPath": "/Users/oscar.chen/Library/Caches/pypoetry/virtualenvs/monorepo-UdgWylWN-py3.11/bin/python",
+  "pyright.enable": true,
+  "python.autoComplete.addBrackets": true,
+  "python.linting.flake8Enabled": true
 }
