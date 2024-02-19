@@ -5,28 +5,24 @@
 # TODO: install CLI shell(fish)
 # TODO: install shell prompt(starship)
 # TODO: install tmux
-# TODO: install 
 
-# TODO: Not test yet
-# sync nvim config
+# Deploy config and scrips
+# nvim config
 cp -r ./nvim $HOME/.config
-# The followings are TODOs
-# sync alacritty config
+# alacritty config
 cp -r ./alacritty $HOME/.config
-# sync starship config
+# starship config
 cp ./starship.toml $HOME/.config/starship.toml
-# sync fish shell config
+# fish shell config
 cp -r ./fish $HOME/.config
-# sync git config
+# git config
 cp -r ./git/.git* $HOME
-# sync a git diff script
+# a git diff script
 cp -r ./bin $HOME
-# Sync CLI tools
-# sync neofetch config
+# CLI tools
+# neofetch config
 cp -r ./neofetch $HOME/.config
+# tmux config
+cp -r ./tmux/tmux.conf $HOME/.tmux.conf
 # TODO: install z jump
 # TODO: install fzf -> fuzzy search
-# sync tmux config
-cp -r ./tmux/tmux.conf $HOME/.tmux.conf
-# sync common used scripts
-cp -r ./bin $HOME

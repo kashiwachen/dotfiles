@@ -1,15 +1,19 @@
-# sync nvim config
+# BACKUP
+## nvim
 cp -r $HOME/.config/nvim .
-# The followings are TODOs
-# sync alacritty config
+## alacritty
 cp -r $HOME/.config/alacritty .
-# sync starship config
+## starship
 cp $HOME/.config/starship.toml .
-# sync fish shell config
+## fish shell
 cp -r $HOME/.config/fish .
-# sync git config
+## git config
 cp $HOME/.gitignore_global ./git
 cp $HOME/.gitconfig ./git
 cp $HOME/.gitflow_export ./git
-# sync neofetch config
+## common used scripts
+cp $HOME/bin/git-diff-wrapper.sh ./bin
+## neofetch
 cp -r $HOME/.config/neofetch .
+## tmux
+cp -r $HOME/.tmux.conf ./tmux/tmux.conf
