@@ -11,8 +11,5 @@ cp -r $HOME/.config/fish .
 cp $HOME/.gitignore_global ./git
 cp $HOME/.gitconfig ./git
 cp $HOME/.gitflow_export ./git
-cp $HOME/.config/git-diff-wrapper.sh ./git
 # sync neofetch config
 cp -r $HOME/.config/neofetch .
-# sync tmux config
-cp $HOME/.tmux.config ./tmux/tmux.config
