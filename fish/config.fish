@@ -17,6 +17,9 @@ alias v="nvim"
 alias vc="nvim --clean"
 alias lg="lazygit"
 alias ls="exa -lag --header"
+alias info="neofetch"
+## git
+alias gt="git"
 
 ## tmux
 alias tm="tmux"
@@ -24,9 +27,6 @@ alias tma="tmux at"
 alias tmt="tmux at -t"
 alias tmk="tmux kill-session -t"
 alias tml="tmux ls"
-
-## git
-alias git="gt"
 
 # colored man setup
 set -g man_blink -o red
