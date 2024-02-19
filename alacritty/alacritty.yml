@@ -920,26 +920,26 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    family: Hack Nerd Font Mono
-      #family: ComicCodeLigatures Nerd Font
+    # family: Hack Nerd Font
+    family: ComicCodeLigatures Nerd Font
     style: Regular
 
   # Bold font face
   bold:
-    family: Hack Nerd Font Mono
-      #family: ComicCodeLigatures Nerd Font
+    # family: Hack Nerd Font
+    family: ComicCodeLigatures Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    family: Hack Nerd Font Mono
-      #family: ComicCodeLigatures Nerd Font
+    # family: Hack Nerd Font
+    family: ComicCodeLigatures Nerd Font
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Hack Nerd Font Mono
-      #family: ComicCodeLigatures Nerd Font
+    # family: Hack Nerd Font
+    family: ComicCodeLigatures Nerd Font
     style: Bold Italic
   size: 13
 
@@ -955,7 +955,7 @@ import:
 cursor:
   style:
     shape: Underline
-  vi_mode_style: Underline
+  vi_mode_style: Block
 
 
 selection:
