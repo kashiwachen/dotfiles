@@ -5,19 +5,26 @@
 	required = true
 [user]
 	name = kashiwachen
+	email = oscar.chen@flywheel.jp
 [icdiff]
 	options = --highlight --line-numbers
 [alias]
-  last = log -1
+  ll = log -1 HEAD --stat
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow) %d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  a = add
   co = checkout
   cm = commit -m
-  st = status
-  br = branch
+  st = status -sb
+  b = branch
   df = icdiff
+  dfc = icdiff --cached
   pp = pull --prune
+  dv = difftool -t vimdiff -y
+  gl = config --global -l
 [core]
   excludesfile = /Users/oscar/.gitignore_global
   ignorecase = false
 [push]
   autoSetupRemote = true
+[help]
+  autocorrect = 10
