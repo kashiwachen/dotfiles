@@ -21,6 +21,7 @@
   pp = pull --prune
   dv = difftool -t vimdiff -y
   gl = config --global -l
+  ps = push
 [core]
   excludesfile = /Users/oscar/.gitignore_global
   ignorecase = false
