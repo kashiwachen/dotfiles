@@ -11,17 +11,16 @@
 [alias]
   ll = log -1 HEAD --stat
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow) %d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  a = add
   co = checkout
   cm = commit -m
   st = status -sb
   b = branch
   df = icdiff
   dfc = icdiff --cached
+  p = push
   pp = pull --prune
   dv = difftool -t vimdiff -y
   gl = config --global -l
-  ps = push
 [core]
   excludesfile = /Users/oscar/.gitignore_global
   ignorecase = false
