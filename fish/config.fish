@@ -40,3 +40,7 @@ set -g man_underline -u 93a1a1
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# cargo
+export CARGO_INSTALL="$HOME/.cargo"
+export PATH="$CARGO_INSTALL/bin:$PATH"
