@@ -1,0 +1,63 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      "poetry.lock": "toml"
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "search.followSymlinks": false,
+    "redhat.telemetry.enabled": false,
+    "workbench.iconTheme": "material-icon-theme", // explicitly set icon theme as many users install pkief.material-icon-theme, but it's not set by default.
+    // python
+    "python.analysis.typeCheckingMode": "standard",
+    "python.languageServer": "Pylance",
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+      }
+    },
+    "ruff.organizeImports": true,
+    "autoDocstring.docstringFormat": "google",
+    "autoDocstring.generateDocstringOnEnter": true,
+    // json
+    "[json]": {
+      "editor.formatOnSave": true,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.detectIndentation": false,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // markdown
+    "[markdown]": {
+      "editor.formatOnSave": false
+    },
+  },
+  "extensions": {
+    "recommendations": [
+      "bierner.markdown-mermaid",
+      "charliermarsh.ruff",
+      "editorconfig.editorconfig",
+      "esbenp.prettier-vscode",
+      "ms-python.black-formatter",
+      "ms-python.flake8",
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-vsliveshare.vsliveshare",
+      "njpwerner.autodocstring",
+      "pkief.material-icon-theme",
+      "redhat.vscode-yaml",
+      "samuelcolvin.jinjahtml",
+      "streetsidesoftware.code-spell-checker",
+      "tamasfe.even-better-toml",
+      "usernamehw.errorlens",
+    ]
+  }
+}
