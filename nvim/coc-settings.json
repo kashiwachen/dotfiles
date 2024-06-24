@@ -1,6 +1,0 @@
-{
-  "python.pythonPath": "/Users/oscar.chen/Library/Caches/pypoetry/virtualenvs/monorepo-UdgWylWN-py3.11/bin/python",
-  "pyright.enable": true,
-  "python.autoComplete.addBrackets": true,
-  "python.linting.flake8Enabled": true
-}
