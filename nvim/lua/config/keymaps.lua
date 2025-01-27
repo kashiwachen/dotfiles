@@ -34,10 +34,10 @@ keymap.set("n", "sk", "<C-w>k")
 keymap.set("n", "sl", "<C-w>l")
 
 -- Resize window
-keymap.set("n", "<C-a><left>", "<C-w><")
-keymap.set("n", "<C-a><right>", "<C-w>>")
-keymap.set("n", "<C-a><up>", "<C-w>+")
-keymap.set("n", "<C-a><down>", "<C-w>-")
+keymap.set("n", "<C-w>h", "<C-w><")
+keymap.set("n", "<C-w>l", "<C-w>>")
+keymap.set("n", "<C-w>k", "<C-w>+")
+keymap.set("n", "<C-w>j", "<C-w>-")
 
 -- Hide highlight
 keymap.set("n", "<C-l>", ":noh<Return>")
