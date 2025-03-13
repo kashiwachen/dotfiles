@@ -5,7 +5,7 @@ I personally start to use the following configures of some tools for daily devel
 ## Tutorial
 
 1. install `homebrew`
-2. install `Hack Nerd Font`, `fish`, `alacritty`, `exa`, `tree`, `icdiff` throught `homebrew`
+2. install `Hack Nerd Font`, `fish`, `wezterm`, `exa`, `tree`, `icdiff` throught `homebrew`
 3. install `starship`
 4. install `fisher`(fish plugin manager) and cli tools
 5. configure fish shell
@@ -25,11 +25,12 @@ I personally start to use the following configures of some tools for daily devel
   - fisher(plugin manager)
     - z
     - fzf
-- alacritty
+- wezterm
 
 ### DEPRECATED
 
 - oh-my-zsh/zsh
+- alacritty
 
 ## Code
 
@@ -40,3 +41,7 @@ I personally start to use the following configures of some tools for daily devel
     - .pre-commit config
 - git
 - HHKB keybord config
+
+## Scripts
+
+- 
