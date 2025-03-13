@@ -44,4 +44,5 @@ I personally start to use the following configures of some tools for daily devel
 
 ## Scripts
 
-- 
+- Backup target configuration with `backup.sh`
+- Deploy(Copy) target configuration to `deploy.sh`
