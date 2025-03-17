@@ -9,8 +9,6 @@
 # Deploy config and scrips
 # nvim config
 cp -r ./nvim $HOME/.config
-# alacritty config
-cp -r ./alacritty $HOME/.config
 # starship config
 cp ./starship.toml $HOME/.config/starship.toml
 # fish shell config
