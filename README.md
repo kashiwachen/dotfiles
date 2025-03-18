@@ -4,6 +4,8 @@ I personally start to use the following configures of some tools for daily devel
 
 ## TODO
 
+-[] Add document for basic setup
+  -[] `git`
 -[] Separate the scripts from deploy.sh
 -[] Create setup.sh to install tools
 
