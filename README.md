@@ -2,6 +2,11 @@
 
 I personally start to use the following configures of some tools for daily development:
 
+## TODO
+
+-[] Separate the scripts from deploy.sh
+-[] Create setup.sh to install tools
+
 ## Tutorial
 
 1. install `homebrew`
