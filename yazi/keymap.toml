@@ -1,0 +1,6 @@
+
+[manager]
+prepend_keymap = [
+  { on = [ "<A-h>" ], run = 'hidden toggle', desc = "hide" },
+]
+
