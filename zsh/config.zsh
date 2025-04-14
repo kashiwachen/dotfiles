@@ -2,23 +2,15 @@ source $HOME/.config/zsh.configs/zsh-z/zsh-z.plugin.zsh
 
 # yazi(y) shell wrapper
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
 }
 
 # Export environment variables
-
-## bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-### bun completions
-[ -s "/Users/oscar.chen/.bun/_bun" ] && source "/Users/oscar.chen/.bun/_bun"
-
 ## starship setup
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 export STARSHIP_CACHE="$HOME/.starship/cache"
