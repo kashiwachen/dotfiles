@@ -50,7 +50,8 @@ git clone https://github.com/agkozak/zsh-z.git $HOME/.config/zsh.configs/zsh-z/
 
 # Deploy config and scrips
 echo '> Start to copy the configurations'
-
+## wezterm config
+cp -r $PWD/wezterm $HOME/.config
 ## nvim config
 cp -r ./nvim $HOME/.config
 ## starship config
