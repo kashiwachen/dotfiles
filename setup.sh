@@ -32,7 +32,7 @@ configure_starship() {
 
 # Install tools
 brew install \
-  neovim yazi tmux eza lazygit \
+  neovim yazi tmux eza lazygit gh \
   starship fzf z \
   ffmpeg sevenzip jq poppler fd ripgrep \
   zoxide imagemagick \
