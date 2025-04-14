@@ -34,8 +34,8 @@ configure_starship() {
 brew install \
   neovim yazi tmux eza lazygit gh \
   starship fzf z \
-  ffmpeg sevenzip jq poppler fd ripgrep \
-  zoxide imagemagick \
+  ffmpeg sevenzip jq poppler fd ripgrep zoxide imagemagick \
+  colima \
   font-symbols-only-nerd-font
 
 # Install rectangle
