@@ -110,21 +110,6 @@ If needed, you can further use the `web_scraper.py` file to scrape the web page 
 - Backend: Deno (Oak framework)
 
 ### Progress
-[X] Scaffold frontend (React + TypeScript, minimalist UI)
-[X] Scaffold backend (Deno + Oak)
-[X] Basic UI: sidebar, content area, minimalist style
-[X] README with intro and TODO list
-[ ] Integrate Google Docs API in backend
-[ ] Implement endpoints to list and fetch Google Docs
-[ ] Connect frontend to backend API
-[ ] Display Google Docs structure in sidebar
-[ ] Render selected doc content in main area
-[ ] Add error/loading states
-[ ] (Optional) Export handbook as static HTML
-
----
 
 # Lessons
 
-- Use Express.js for backend instead of Node.js/npm as per user preference.
-- For git/gh multiline commit messages, use a file and include "[Cursor]" in the message.
