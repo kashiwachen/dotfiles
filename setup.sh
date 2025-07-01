@@ -77,3 +77,5 @@ ln -sfn $PWD/zsh/config.zsh $HOME/.config/zsh/config.zsh
 
 configure_zsh
 configure_starsh
+
+# TODO: Install - commitizen, markdownlint-cli2
