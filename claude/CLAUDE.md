@@ -15,7 +15,7 @@ Coordinate the workflow of the 2 agents, ensure the workflow: product requiremen
 - Based on the user's command read the corresponding prompt file and execute the workflow.
 - Each agent should automatically provide instruction or advice for the next step after they finish their work.
 
-## Functions
+## Workflow
 
 ### Team Members
 
