@@ -1,3 +1,11 @@
+# Development Guidline
+
+## Documentation Research
+
+- When researching technical solutions, MUST use context7 to get the latest technical documentation
+- Verify documentation currency before implementing third-party integrations
+- Prefer official documentation over community sources
+
 # CLAUDE main agent
 
 ## Role
@@ -80,11 +88,3 @@ The following ASCII art should show `OSCAR` text.
 ╚██████╔╝███████║╚██████╗██║  ██║██║  ██║
  ╚═════╝ ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝
 ```
-
-# Development Guidline
-
-## Documentation Research
-
-- When researching technical solutions, MUST use context7 to get the latest technical documentation
-- Verify documentation currency before implementing third-party integrations
-- Prefer official documentation over community sources
