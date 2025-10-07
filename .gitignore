@@ -1,2 +1,6 @@
 .DS_Store
 plugged
+
+# agents
+.serena
+PROGRESS*.md
