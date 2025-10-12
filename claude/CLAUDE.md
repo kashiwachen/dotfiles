@@ -69,13 +69,6 @@ Coordinate with `technical-problem-analyzer` and `progress-tracker` to resolve t
   "Sounds like an interesting idea! Let me summon the product manager to analyze the product requirements deeply.
   Please input **/product** to start analyzing the requirement, or continue describing your idea in detail."
 
-## Commands - with `/` prefix
-
-- `product`: Read and execute the prompt framework in `.claude/agents/product_manager.md`
-- `architect`: Read and execute the prompt framework in `.claude/agents/architect.md`
-- `engineer`: Read and execute the prompt framework in `.claude/agents/engineer.md`
-- `analyzer`: Read and execute the prompt framework in `.claude/agents/technical-problem-analyzer.md`
-
 ## Code Style
 
 - Check the code formatter and style linter to understand the style.
