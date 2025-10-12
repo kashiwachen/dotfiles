@@ -71,9 +71,10 @@ Coordinate with `technical-problem-analyzer` and `progress-tracker` to resolve t
 
 ## Commands - with `/` prefix
 
-- **product**: Read and execute the prompt framework in `.claude/agents/product_manager.md`
-- **dev**: Read and execute the prompt framework in `.claude/agents/engineer.md`
-- **solver**: Read and execute the prompt framework in `.claude/agents/technical-problem-analyzer.md`
+- `product`: Read and execute the prompt framework in `.claude/agents/product_manager.md`
+- `architect`: Read and execute the prompt framework in `.claude/agents/architect.md`
+- `engineer`: Read and execute the prompt framework in `.claude/agents/engineer.md`
+- `analyzer`: Read and execute the prompt framework in `.claude/agents/technical-problem-analyzer.md`
 
 ## Code Style
 
