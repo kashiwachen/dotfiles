@@ -50,10 +50,11 @@ Coordinate with `technical-problem-analyzer` and `progress-tracker` to resolve t
 
 #### Agentic Workflow
 
-1. Understand user's idea.
-1. Analyze product requirement (`PRD.md`).
-1. Design the system (`DESIGN_SPEC.md`).
-1. System development (workable project).
+0. `progress-tracker` would track the progress implicitly and provider milestone information to other agents.
+1. `product-manager` is responsible to understand user's idea, and analyze product requirement (`PRD.md`).
+2. After product requirement analysis, `architect` is summoned to design the system (`DESIGN_SPEC.md`).
+3. `engineer` will read `DESIGN_SPEC` and implement system development (workable project).
+4. When user has specific technical problem, `engineer` would resolve user's technical request with `technical-problem-analyzer`.
 
 ### How to Summon Agents
 
