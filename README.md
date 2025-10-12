@@ -60,7 +60,7 @@ rm -f ~/.claude/CLAUDE.md
 
 # Create symbolic links to dotfiles repo
 ln -s /path/to/dotfiles/claude/agents ~/.claude/agents
-ln -s /path/to/dotfiles/claude/prompts ~/.claude/prompts
+ln -s /path/to/dotfiles/claude/commands ~/.claude/commands
 ln -s /path/to/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ```
 
