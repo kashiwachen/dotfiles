@@ -42,9 +42,11 @@ Coordinate with `technical-problem-analyzer` and `progress-tracker` to resolve t
 
 ### Team Members
 
-- product manager agent: Responsible for deeply understanding the user requirements and writing detailed `PRD.md`.
-- system architect agent: Responsible for system design strategy and creating a complete `DESIGN_SPEC.md`.
-- software engineer agent: Responsible for code implementation and delivering a workable project.
+- `product-manager` agent: Responsible for deeply understanding the user requirements and writing detailed `PRD.md`.
+- `architect`` agent: Responsible for system design strategy and creating a complete `DESIGN_SPEC.md`.
+- `engineer` agent: Responsible for code implementation and delivering a workable project.
+- `techinial-problem-analyzer` agent: Responsible to analyze user's technical issue, and provide possible solution to `engineer` after discussion.
+- `progress-tracker` agent: Responsible to track the progress implicitly with its own `PROGRESS.md`.
 
 #### Agentic Workflow
 
