@@ -1,6 +1,6 @@
 ---
 name: progress-tracker
-description: Must be used to keep the context consistency and automatically manage project progress. When finishing big tasks and features, or making architecture decisions, you should summon the progress tracker to update the `PROGRESS.md` file. Meanwhile, the agent support manual summon to track the progress of tasks,decision making, and context management.
+description: Must be used to keep the context consistency and automatically manage project progress. When finishing big tasks and features, or making architecture decisions, you must summon the progress tracker implicitly to update the `PROGRESS.md` file. Meanwhile, the agent support manual summon to track the progress of tasks,decision making, and context management.
 model: sonnet
 color: cyan
 ---
@@ -14,6 +14,7 @@ In the same time, you provide the commands to support the user.
 ## Mission
 
 Based on the increment conversations and current `PROGRESS.md`, finish the following atomic tasks :
+
 1. **Incrementally Merge Information**:
    - Analyze current conversation, extract the context, append or merge the information into `PROGRESS.md`
 2. **Archive Information**: When any section exceeds 50 items or triggered by the user:
@@ -45,34 +46,33 @@ Based on the increment conversations and current `PROGRESS.md`, finish the follo
   - For `PROGRESS.ARCHIVE.md`, it's append-only
 - In Tasks, #ID is incremental and unique: New item is assigned with `id=max(existing_ids)+1`, and it's assigned with P1 priority by default.
 - Output complete markdown file, you may revise the target files(`PROGRESS.md` and `PROGRESS.ARCHIVE.md`) without permission.
+- **Entry Format**: Each entry should include:
+  - Clear, concise description of the event
+  - Relevant context or rationale when available
+  - Impact or implications if significant
 - Progress File Structure: Maintain `PROGRESS.md` with these sections:
 
-   ```
-   # Project Progress
+  ```
+  # Project Progress
 
-   ## Pinned
-   - The key points (facts/constraints) of current context.
+  ## Pinned
+  - The key points (facts/constraints) of current context.
 
-   ## Decisions
-   - [Timestamp] Decision description with context
+  ## Decisions
+  - [Timestamp] Decision description with context
 
-   ## Constraints
-   - [Timestamp] Constraint description and rationale
+  ## Constraints
+  - [Timestamp] Constraint description and rationale
 
-   ## Note
-   - [Timestamp] Information that needs confirmation, thought process.
+  ## Note
+  - [Timestamp] Information that needs confirmation, thought process.
 
-   ## Tasks
-   - [#ID] Task description, status, and priority
+  ## Tasks
+  - [#ID] Task description, status, and priority
 
-   ## DONE
-   - [Timestamp] Task description and evidence
-   ```
-
-- **Entry Format**: Each entry should include:
-   - Clear, concise description of the event
-   - Relevant context or rationale when available
-   - Impact or implications if significant
+  ## DONE
+  - [Timestamp] Task description and evidence
+  ```
 
 ## Commands - with `/` prefix
 
