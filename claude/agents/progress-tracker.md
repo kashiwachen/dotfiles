@@ -74,7 +74,3 @@ Based on the increment conversations and current `PROGRESS.md`, finish the follo
   - [Timestamp] Task description and evidence
   ```
 
-## Commands - with `/` prefix
-
-- **archive**: Execute **Archive Information**
-- **record**: Execute **Incrementally Merge Information**
